@@ -1,183 +1,67 @@
-# ArguLex - Legal Assistant
+# ⚖️ ArguLex: Indian Law Voice-Enabled Legal Assistant
 
-A professional web-based legal assistant that combines general legal knowledge with advanced PDF document analysis capabilities. The system provides a modern, user-friendly interface with dark mode support and secure authentication.
+**ArguLex** is an AI-powered legal assistant that helps users understand Indian laws using natural language, semantic search, and voice-based interaction. It uses powerful NLP tools to retrieve and explain information from two key legal sources:
 
-## Features
+- 🧾 **Indian Penal Code (IPC)**
+- 📜 **Constitution of India**
 
-### 1. Web Interface
-- **Modern UI/UX**
-  - Responsive design for all devices
-  - Dark mode support
-  - Smooth animations
-  - User-friendly forms
+---
 
-- **Authentication System**
-  - Secure user registration
-  - Login functionality
-  - Session management
-  - Protected routes
+## 🧠 Overview
 
-### 2. PDF Document Analysis
-- **Case Report Generation**
-  - Extracts case name, date, and judges
-  - Generates comprehensive case summary
-  - Identifies key conclusions
-  - Creates downloadable reports
+ArguLex is designed to democratize access to legal knowledge by combining:
+- Vector search with Sentence Transformers
+- Generative AI using OpenAI models
+- Voice input/output for conversational access
+- A clean Gradio-based chat interface
 
-- **Document Querying**
-  - Answers specific questions about uploaded documents
-  - Provides context-aware responses
-  - Quotes relevant sections from the document
-  - Maintains accuracy and relevance
+---
 
-### 3. Chatbot System
-- **Professional Chatbot**
-  - Specialized in legal document analysis
-  - Handles complex legal queries
-  - Provides detailed explanations
-  - Maintains professional tone
+## 📚 Datasets Included
 
-- **General Chatbot**
-  - Answers general legal questions
-  - Provides legal information and guidance
-  - Maintains professional tone
-  - Suggests professional consultation when needed
+### 1. **Indian Penal Code (IPC) Dataset**
+- Contains all major IPC sections with:
+  - Section number
+  - Title
+  - Full legal description
+- 🗂 Format: CSV and JSON
 
-- **Conversation Management**
-  - Maintains chat history
-  - Provides well-structured responses
-  - Handles multiple topics
-  - Professional formatting
+📌 **Source**: [Kaggle - akshit2605/ipc-sections-dataset](https://www.kaggle.com/datasets/akshit2605/ipc-sections-dataset)
 
-## Technical Details
+---
 
-### Dependencies
-```python
-# Core Dependencies
-flask>=2.0.0
-openai>=1.0.0
-langchain>=0.1.0
-PyMuPDF (fitz)>=1.22.0
-sentence-transformers>=2.2.0
-nltk>=3.8.1
-faiss-cpu>=1.7.4
-pandas>=2.0.0
-numpy>=1.24.0
-python-dotenv>=1.0.0
-pymongo>=4.0.0
-```
+### 2. **Indian Constitution Dataset**
+- Includes Articles with:
+  - Article number
+  - Title/headline
+  - Full content of the article
+- 🗂 Format: JSON and CSV
 
-### Installation
+📌 **Source**: [Hugging Face - Sharathhebbar24/Indian-Constitution](https://huggingface.co/datasets/Sharathhebbar24/Indian-Constitution)
 
-1. Clone the repository:
+---
+
+## 🔍 Key Features
+
+- 🔎 **Semantic Legal Search** — Retrieve relevant laws/articles from user queries using Sentence Transformers.
+- 💬 **Chatbot Interface** — Ask any legal question and get structured, human-like answers.
+- 🗣️ **Voice Assistant** — Speak your query and hear back the AI-generated legal answer.
+- 🌐 **Gradio Web Interface** — User-friendly, browser-based access to the chatbot.
+
+---
+
+## 🛠️ Project Structure
+
 ```bash
-git clone [repository-url]
-cd [repository-name]
-```
-
-2. Install dependencies:
-```bash
-pip install -r requirements.txt
-```
-
-3. Set up environment variables:
-```bash
-# Create a .env file with:
-OPENAI_API_KEY=your_api_key_here
-FLASK_SECRET_KEY=your_secret_key_here
-MONGODB_URI=your_mongodb_uri_here
-```
-
-4. Run the application:
-```bash
-python app.py
-```
-
-### Usage
-
-1. **Web Interface**
-   - Visit `http://localhost:5000` in your browser
-   - Create an account or log in
-   - Choose between Professional or General chatbot
-   - Start chatting or upload documents
-
-2. **PDF Document Analysis**
-   - Upload a PDF document
-   - Get automatic analysis and summary
-   - Ask specific questions about the document
-   - Download comprehensive reports
-
-3. **Chatbot Interaction**
-   - Ask general legal questions
-   - Get professional responses
-   - Maintain conversation history
-   - Switch between chatbots as needed
-
-## Project Structure
-
-```
-project/
-├── app.py
-├── chatbot/
-│   ├── __init__.py
-│   ├── professional_chatbot.py
-│   ├── general_chatbot.py
-│   └── chat_manager.py
-├── static/
-│   ├── css/
-│   ├── js/
-│   └── images/
-├── templates/
-│   ├── base.html
-│   ├── login.html
-│   ├── signup.html
-│   ├── selection.html
-│   ├── professional_chat.html
-│   └── chat.html
+📦 argulex-legal-ai
+├── data/
+│   ├── ipc_sections.csv
+│   └── indian_constitution.csv
+├── app/
+│   ├── chatbot.py           # Retrieval and RAG logic
+│   ├── voice_interface.py   # Voice input/output
+│   └── interface.py         # Gradio UI
+├── models/
+│   └── embedding_model.pkl
 ├── requirements.txt
-├── .env
 └── README.md
-```
-
-## Key Components
-
-### Web Application
-- Flask-based web server
-- MongoDB for data storage
-- Session management
-- Route protection
-
-### Chatbot System
-- Professional and General chatbots
-- Document analysis capabilities
-- Chat history management
-- User session handling
-
-### User Interface
-- Bootstrap-based responsive design
-- Dark mode support
-- Form validation
-- Interactive elements
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Commit your changes
-4. Push to the branch
-5. Create a Pull Request
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Acknowledgments
-
-- OpenAI for GPT models
-- Flask for web framework
-- Bootstrap for UI components
-- MongoDB for data storage
-
-## Support
-
-For support, please open an issue in the repository or contact the maintainers. 
