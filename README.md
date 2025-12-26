@@ -46,7 +46,7 @@ ArguLex is designed to democratize access to legal knowledge by combining:
 - 🔎 **Semantic Legal Search** — Retrieve relevant laws/articles from user queries using Sentence Transformers.
 - 💬 **Chatbot Interface** — Ask any legal question and get structured, human-like answers.
 - 🗣️ **Voice Assistant** — Speak your query and hear back the AI-generated legal answer.
-- 🌐 **Gradio Web Interface** — User-friendly, browser-based access to the chatbot.
+- 🌐 **Web Interface** — User-friendly, browser-based access to the chatbot.
 
 ---
 
