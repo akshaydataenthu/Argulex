@@ -49,19 +49,3 @@ ArguLex is designed to democratize access to legal knowledge by combining:
 - 🌐 **Gradio Web Interface** — User-friendly, browser-based access to the chatbot.
 
 ---
-
-## 🛠️ Project Structure
-
-```bash
-📦 argulex-legal-ai
-├── data/
-│   ├── ipc_sections.csv
-│   └── indian_constitution.csv
-├── app/
-│   ├── chatbot.py           # Retrieval and RAG logic
-│   ├── voice_interface.py   # Voice input/output
-│   └── interface.py         # Gradio UI
-├── models/
-│   └── embedding_model.pkl
-├── requirements.txt
-└── README.md
